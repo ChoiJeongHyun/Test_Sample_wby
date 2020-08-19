@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="vm"
+            type="kr.co.example.codingtest_wirebarley.views.MainViewModel" />
+
+        <variable
+            name="country"
+            type="kr.co.example.codingtest_wirebarley.vo.Country" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/item_view_country_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{country.name}"
+            android:textSize="22sp"
+            android:textColor="#000"
+            android:gravity="center"
+            android:padding="8dp"
+            android:onClick="@{() -> vm.itemCLick(country)}"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
