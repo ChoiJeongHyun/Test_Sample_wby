@@ -34,8 +34,6 @@ class ApiManager {
         .build()
 
     internal fun <T> getRetrofitService(apiClass: Class<T>) = retrofit.create(apiClass)
-
-    fun getRet() = retrofit
-
+    
 
 }
